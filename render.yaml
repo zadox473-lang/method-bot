@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: insta-analyzer-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python xc.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_ID
+        value: 8740135346
+      - key: FORCE_CHANNELS
+        value: "@midnight_xaura,@proxydominates,@noruleclub"
+      - key: PORT
+        value: 8080
